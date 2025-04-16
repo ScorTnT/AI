@@ -1,0 +1,3 @@
+pip install BeautifulSoup4
+pip install finance-datareader
+pip install matplotlib
