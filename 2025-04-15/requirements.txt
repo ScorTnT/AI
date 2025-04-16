@@ -1,0 +1,6 @@
+pip install kagglehub
+pip install numpy
+pip install pandas
+pip install tensorflow
+pip install sklearn
+pip install matplotlib
