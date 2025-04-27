@@ -1,10 +1,13 @@
 import FinanceDataReader as fdr
 import numpy as np
 import matplotlib.pyplot as plt
+
 # 삼성전자 코드='005930', 2020년 데이터부터 다운로드
 samsung = fdr.DataReader('005930', '2020')
+
 # 시작가만 취한다.
 seq_data = (samsung[['Open']]).to_numpy()
+
 # 선형 그래프로 그린다.
 plt.plot(seq_data, color='blue')
 plt.title("Samsung Electronics Stock Price")
@@ -22,5 +25,6 @@ def make_sample(data, window):
         target.append(data[i+window]) # (i+window) 번째 요소는 정답
     return np.array(train), np.array(target) # 훈련 샘플과 정답 레이블을 반환
 X, y = make_sample(seq_data, 7) # 윈도우 크기=7
+
 print(X.shape, y.shape) # 넘파이 배열의 형상 출력
 print(X[0], y[0]) 
