@@ -28,3 +28,4 @@ X, y = make_sample(seq_data, 7) # 윈도우 크기=7
 
 print(X.shape, y.shape) # 넘파이 배열의 형상 출력
 print(X[0], y[0]) 
+prnit(X,y)
